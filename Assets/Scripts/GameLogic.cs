@@ -23,8 +23,8 @@ public class GameLogic : MonoBehaviour {
 		secondUI.SetActive (true);
 	}
 
-	public void showNextScene(){
-		SceneManager.LoadSceneAsync ("Office", LoadSceneMode.Single);
+	public void showNextScene(string scene){
+		SceneManager.LoadSceneAsync (scene, LoadSceneMode.Single);
 	}
 
 }
