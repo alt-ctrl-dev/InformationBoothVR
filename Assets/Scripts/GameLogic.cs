@@ -7,17 +7,6 @@ public class GameLogic : MonoBehaviour {
 
 	public GameObject firstUI, secondUI;
 
-	// Use this for initialization
-	void Start () {
-		secondUI.SetActive (false);
-		if(!firstUI.activeSelf)firstUI.SetActive (false);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-
 	public void showSecondPanel(){
 		firstUI.SetActive (false);
 		secondUI.SetActive (true);
