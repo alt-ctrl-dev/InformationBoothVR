@@ -16,35 +16,21 @@ public class WaypointLogic : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if (player.transform.position == firstWP.transform.position) {
+			firstWP.SetActive (false);
+		}
+		if (player.transform.position == secondWP.transform.position) {
+			secondWP.SetActive (false);
+		}
+		if (player.transform.position == thirdWP.transform.position) {
+			thirdWP.SetActive (false);
+		}
 	}
 
-	public void MoveToFirstWP(){
+	public void MoveToWaypoint(GameObject waypoint){
 		Hashtable hashtable = new Hashtable();
 		hashtable.Add("time", 3f);
-		hashtable.Add("position", firstWP.transform.position);
-		hashtable.Add("onComplete", "ShowWaypoints");
-		hashtable.Add("onCompleteTarget",this.gameObject);
-		hashtable.Add("onStart", "HideWaypoints");
-		hashtable.Add("onStartTarget",this.gameObject);
-		iTween.MoveTo(player, hashtable);
-	}
-
-	public void MoveToSecondWP(){
-		Hashtable hashtable = new Hashtable();
-		hashtable.Add("time", 3f);
-		hashtable.Add("position", secondWP.transform.position);
-		hashtable.Add("onComplete", "ShowWaypoints");
-		hashtable.Add("onCompleteTarget",this.gameObject);
-		hashtable.Add("onStart", "HideWaypoints");
-		hashtable.Add("onStartTarget",this.gameObject);
-		iTween.MoveTo( player, hashtable );
-	}
-
-	public void MoveToThirdWP(){
-		Hashtable hashtable = new Hashtable();
-		hashtable.Add("time", 3f);
-		hashtable.Add("position", thirdWP.transform.position);
+		hashtable.Add("position", waypoint.transform.position);
 		hashtable.Add("onComplete", "ShowWaypoints");
 		hashtable.Add("onCompleteTarget",this.gameObject);
 		hashtable.Add("onStart", "HideWaypoints");
