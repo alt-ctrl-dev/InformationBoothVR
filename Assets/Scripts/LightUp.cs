@@ -13,6 +13,8 @@ public class LightUp : MonoBehaviour {
 	void Start () {
 		defaultMaterial = this.GetComponent<MeshRenderer> ().material; //Save our initial material as the default
 		isLitUp = false;
+		if (canvas != null)
+			canvas.gameObject.SetActive (false);
 	}
 
 	// Update is called once per frame
@@ -41,7 +43,8 @@ public class LightUp : MonoBehaviour {
 	}
 
 	private void ToggleInformation(){
-		canvas.gameObject.SetActive (isLitUp);
-		print ("!@#!@$"+isLitUp);
+		if (canvas != null)
+			canvas.gameObject.SetActive (isLitUp);
+		print ("!@#!@$" + isLitUp);
 	}
 }
