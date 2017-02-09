@@ -25,11 +25,11 @@ public class LightUp : MonoBehaviour {
 		if (!isLitUp) {
 			ObjectLightUp();
 			isLitUp = true;
-			//this.GetComponent<GvrAudioSource> ().Play (); //Play the audio attached
+			this.GetComponent<GvrAudioSource> ().Play (); //Play the audio attached
 		} else {
 			AestheticReset ();
 			isLitUp = false;
-			//this.GetComponent<GvrAudioSource> ().Stop (); //Stop the audio attached
+			this.GetComponent<GvrAudioSource> ().Stop (); //Stop the audio attached
 		}
 		ToggleInformation ();
 	}
