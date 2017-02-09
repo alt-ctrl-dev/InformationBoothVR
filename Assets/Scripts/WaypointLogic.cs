@@ -19,8 +19,8 @@ public class WaypointLogic : MonoBehaviour {
 			Hashtable hashtable = new Hashtable ();
 			hashtable.Add ("time", 3f);
 			hashtable.Add ("position", waypoint.transform.position);
-			hashtable.Add ("onComplete", "StopWalkingAudio");
-			hashtable.Add ("onCompleteTarget", this.gameObject);
+//			hashtable.Add ("onComplete", "StopWalkingAudio");
+//			hashtable.Add ("onCompleteTarget", this.gameObject);
 			hashtable.Add ("onStart", "PlayWalkingAudio");
 			hashtable.Add ("onStartTarget", this.gameObject);
 			iTween.MoveTo (player, hashtable);
@@ -31,8 +31,10 @@ public class WaypointLogic : MonoBehaviour {
 		player.GetComponent<GvrAudioSource> ().Stop ();
 	}
 
-	void PlayWalkingAudio(){
+	IEnumerator PlayWalkingAudio(){
 		player.GetComponent<GvrAudioSource> ().Play ();
+		yield return new WaitForSeconds(1.5f);
+		StopWalkingAudio ();
 	}
 
 }
