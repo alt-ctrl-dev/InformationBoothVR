@@ -25,6 +25,7 @@ public class LightUp : MonoBehaviour {
 		if (!isLitUp) {
 			ObjectLightUp();
 			isLitUp = true;
+			this.GetComponent<GvrAudioSource> ().PlayDelayed (1f);//Play the audio attached with a delay
 		} else {
 			AestheticReset ();
 			isLitUp = false;
@@ -55,7 +56,6 @@ public class LightUp : MonoBehaviour {
 		yield return new WaitForSeconds(duration);
 		if (canvas != null) {
 			canvas.gameObject.SetActive (isLitUp);
-			this.GetComponent<GvrAudioSource> ().Play (); //Play the audio attached
 		}
 	}
 }
