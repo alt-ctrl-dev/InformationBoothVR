@@ -25,7 +25,6 @@ public class LightUp : MonoBehaviour {
 		if (!isLitUp) {
 			ObjectLightUp();
 			isLitUp = true;
-			this.GetComponent<GvrAudioSource> ().Play (); //Play the audio attached
 		} else {
 			AestheticReset ();
 			isLitUp = false;
@@ -35,7 +34,8 @@ public class LightUp : MonoBehaviour {
 	}
 
 	public void AestheticReset() {
-		this.GetComponent<MeshRenderer>().material = defaultMaterial; //Revert to the default material
+		if (!isLitUp)
+			this.GetComponent<MeshRenderer>().material = defaultMaterial; //Revert to the default material
 	}
 
 	public void ObjectLightUp() { //Lightup behavior when the pattern shows.
@@ -53,7 +53,9 @@ public class LightUp : MonoBehaviour {
 
 	IEnumerator playerSelection(float duration) { //Light us up for a duration.  Used during the pattern display
 		yield return new WaitForSeconds(duration);
-		if (canvas != null)
+		if (canvas != null) {
 			canvas.gameObject.SetActive (isLitUp);
+			this.GetComponent<GvrAudioSource> ().Play (); //Play the audio attached
+		}
 	}
 }
