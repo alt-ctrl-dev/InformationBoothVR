@@ -19,18 +19,20 @@ public class WaypointLogic : MonoBehaviour {
 			Hashtable hashtable = new Hashtable ();
 			hashtable.Add ("time", 3f);
 			hashtable.Add ("position", waypoint.transform.position);
-//			hashtable.Add ("onComplete", "ShowWaypoints");
-//			hashtable.Add ("onCompleteTarget", this.gameObject);
-//			hashtable.Add ("onStart", "HideWaypoints");
-//			hashtable.Add ("onStartTarget", this.gameObject);
+			hashtable.Add ("onComplete", "StopWalkingAudio");
+			hashtable.Add ("onCompleteTarget", this.gameObject);
+			hashtable.Add ("onStart", "PlayWalkingAudio");
+			hashtable.Add ("onStartTarget", this.gameObject);
 			iTween.MoveTo (player, hashtable);
 		}
 	}
 
-//	void HideWaypoints(){
-//	}
-//
-//	void ShowWaypoints(){
-//	}
+	void StopWalkingAudio(){
+		player.GetComponent<GvrAudioSource> ().Stop ();
+	}
+
+	void PlayWalkingAudio(){
+		player.GetComponent<GvrAudioSource> ().Play ();
+	}
 
 }
