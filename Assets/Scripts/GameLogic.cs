@@ -7,6 +7,12 @@ public class GameLogic : MonoBehaviour {
 
 	public GameObject firstUI, secondUI;
 
+	// Use this for initialization
+	void Start () {
+		firstUI.SetActive (true);
+		secondUI.SetActive (false);
+	}
+
 	public void showSecondPanel(){
 		firstUI.SetActive (false);
 		secondUI.SetActive (true);
