@@ -25,25 +25,24 @@ public class LightUp : MonoBehaviour {
 		if (!isLitUp) {
 			ObjectLightUp();
 			isLitUp = true;
+			this.GetComponent<GvrAudioSource> ().Play (); //Play the audio attached
 		} else {
 			AestheticReset ();
 			isLitUp = false;
+			this.GetComponent<GvrAudioSource> ().Stop (); //Stop the audio attached
 		}
 		ToggleInformation ();
 	}
 
-	private void AestheticReset() {
+	public void AestheticReset() {
 		this.GetComponent<MeshRenderer>().material = defaultMaterial; //Revert to the default material
-		//this.GetComponent<GvrAudioSource> ().Stop (); //Stop the audio attached
 	}
 
-	private void ObjectLightUp() { //Lightup behavior when the pattern shows.
+	public void ObjectLightUp() { //Lightup behavior when the pattern shows.
 		this.GetComponent<MeshRenderer>().material = lightUpMaterial; //Assign the hover material
-		//this.GetComponent<GvrAudioSource> ().Play (); //Play the audio attached
 	}
 
 	private void ToggleInformation(){
-		print ("!@#!@$" + isLitUp);
 		if (isLitUp) {
 			StartCoroutine (playerSelection (1f));
 		} else {
@@ -53,7 +52,6 @@ public class LightUp : MonoBehaviour {
 	}
 
 	IEnumerator playerSelection(float duration) { //Light us up for a duration.  Used during the pattern display
-		print ("duration = " + duration);
 		yield return new WaitForSeconds(duration);
 		if (canvas != null)
 			canvas.gameObject.SetActive (isLitUp);
