@@ -6,11 +6,12 @@ A app that will provide information about an industry the VR can change.
 
 ## Built using
 - Unity 5.5.0f3
-- Google VR sdk v1.10
+- Google VR sdk v1.0.3
 
 
 ## Prerequisite
 - iTween plugin
+- [Free Low Poly Pack](https://www.cgtrader.com/items/399270/download-page)
 
 ## Issues
  1) If you are building the application on an Android device with OS >= 5.1, then you need to modify the Android manifest to *android:targetSdkVersion="24"*
