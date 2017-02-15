@@ -12,6 +12,8 @@ A app that will provide information about an industry the VR can change.
 ## Prerequisite
 - iTween plugin
 - [Free Low Poly Pack](https://www.cgtrader.com/items/399270/download-page)
+- [Blender](https://www.blender.org/) (If not, you will not be able to run it in unity)
+
 
 ## Issues
  1) If you are building the application on an Android device with OS >= 5.1, then you need to modify the Android manifest to *android:targetSdkVersion="24"*
@@ -28,3 +30,15 @@ A app that will provide information about an industry the VR can change.
 [![VR Information Booth](https://cdn-images-1.medium.com/max/1200/1*3iBzcJWenH7KSKxJgvu59w.jpeg)](https://www.youtube.com/watch?v=PX7rYyyys3s)
 
 ### Read about this journey => [Medium article](https://medium.com/@reuben.coutinho/vr-information-booth-bc0751a28e4d#.cs87ibly1)
+
+## Changelog
+- V1.1
+    
+Added 360 image viewer to landscape stand
+
+- v1.2
+
+Added 360 video viewer to adventure stand.
+Credit to : 
+  1.  [misslivirose](https://github.com/misslivirose) for the invert shader
+  2.  [EnigmaToots](http://enigmatoots.wixsite.com/) for the tutorial on the sphere
