@@ -9,17 +9,21 @@ public class GameLogic : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		firstUI.SetActive (true);
-		secondUI.SetActive (false);
+		if(firstUI!=null)firstUI.SetActive (true);
+		if(secondUI!=null)secondUI.SetActive (false);
 	}
 
 	public void showSecondPanel(){
-		firstUI.SetActive (false);
-		secondUI.SetActive (true);
+		if(firstUI!=null)firstUI.SetActive (false);
+		if(secondUI!=null)secondUI.SetActive (true);
 	}
 
 	public void showNextScene(string scene){
 		SceneManager.LoadSceneAsync (scene, LoadSceneMode.Single);
 	}
 
+	public void showNextSceneWithText(string scene){
+		showSecondPanel ();
+		SceneManager.LoadSceneAsync (scene, LoadSceneMode.Single);
+	}
 }
