@@ -23,3 +23,8 @@ A app that will provide information about an industry the VR can change.
 - **Eiffel Tower** by Deb.Lewis is licensed under CC Attribution
 - **#30Days3D - Day1 - Fast Food** by Jens is licensed under CC Attribution-ShareAlike
 - **Hot Air Balloon** by leoni is licensed under CC Attribution
+
+## Video
+[![VR Information Booth](https://cdn-images-1.medium.com/max/1200/1*3iBzcJWenH7KSKxJgvu59w.jpeg)](https://www.youtube.com/watch?v=PX7rYyyys3s)
+
+### Read about this journey => [Medium article](https://medium.com/@reuben.coutinho/vr-information-booth-bc0751a28e4d#.cs87ibly1)
