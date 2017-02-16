@@ -6,7 +6,7 @@ A app that will provide information about an industry the VR can change.
 
 ## Built using
 - Unity 5.5.0f3
-- Google VR sdk v1.0.3
+- Google VR sdk v1.10.0
 
 
 ## Prerequisite
