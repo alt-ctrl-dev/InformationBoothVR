@@ -24,6 +24,6 @@ public class GameLogic : MonoBehaviour {
 
 	public void showNextSceneWithText(string scene){
 		showSecondPanel ();
-		SceneManager.LoadSceneAsync (scene, LoadSceneMode.Single);
+		showNextScene(scene);
 	}
 }
