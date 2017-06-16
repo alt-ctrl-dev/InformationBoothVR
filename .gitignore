@@ -33,3 +33,5 @@ Assets/Plugins/
 Assets/GoogleVR/
 GvrIgnoreManifestMergeCheck.txt
 Assets/EasyMovieTexture/
+*.rsp
+*.rsp.meta
